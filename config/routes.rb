@@ -1,5 +1,7 @@
 Gary::Application.routes.draw do
 
+  devise_for :members
+
   root :to => 'pages#home'
   match '/home' => 'pages#home'
   match '/about' => 'pages#about'
