@@ -1,0 +1,23 @@
+development:
+  adapter: mysql2
+  database: gary_development
+  pool: 5
+  timeout: 5000
+  username: root
+  password: korn
+
+test:
+  adapter: mysql2
+  database: gary_test
+  pool: 5
+  timeout: 5000
+  username: root
+  password: korn
+
+production:
+  adapter: mysql2
+  database: gary_production
+  pool: 5
+  timeout: 5000
+  username: root
+  password: korn

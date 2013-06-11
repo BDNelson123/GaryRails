@@ -1,0 +1,540 @@
+/*--------------------------------------------------
+		Theme_# 	547
+		Cat 			Business & Legal
+		Name			Lawyer
+--------------------------------------------------*/
+
+body {
+	margin: 0;	
+	height: 100%;	
+	background-color: #ffffff;
+	background-image: url(images/background.jpg);
+	background-position: center top;
+	color: #333333;
+}
+
+.sf_pagetitle h1 {
+	font-size:18px;
+	margin: 0;
+	font-weight: normal;
+}
+
+p {
+}
+
+.sf_outer_wrapper {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.sf_extra1 {
+}
+
+.sf_wrapper {	
+	min-height: 700px;
+	height: auto;
+	_height: 700px;
+	width: 958px;
+	margin: 0 auto;
+	background-image: url(images/lawyer.jpg);
+	background-repeat: no-repeat;
+	background-position: 33px 53px;
+}
+
+/*--------------------------------
+		Top Navigation
+---------------------------------*/
+
+.sf_navigation_top {
+	display:none;
+}
+
+.sf_navigation_top ul {	
+}
+
+.sf_navigation_top ul:after {	
+}
+
+.sf_navigation_top ul li {	
+}
+
+.sf_navigation_top ul li.sf_last_nav_item {	
+}
+
+.sf_navigation_top ul li.sf_first_nav_item {
+}
+
+.sf_navigation_top ul li a {		
+}
+
+.sf_navigation_top ul li a:visited {	
+}
+
+.sf_navigation_top ul li a:hover{	
+}
+
+/*--------------------------------
+		End Top Navigation
+---------------------------------*/
+
+.sf_extra10 {	
+	height: 20px;
+}
+
+/*--------------------------------
+		Header
+---------------------------------*/
+
+.sf_header_wrapper {
+	height: 269px;
+	width: 958px;
+}
+
+.sf_header_wrapper:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.sf_extra2 {
+	width: 287px;
+	height: 175px;
+	margin-left: 37px;
+}
+
+.sf_main_header {
+	overflow: hidden;
+	font-size: 28px;
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	width: 468px;
+	height: 110px;
+	margin: -95px 0 0 440px;
+	text-transform: uppercase;
+}
+
+.sf_main_header div{ height: 106px; overflow: hidden; } 
+.sf_main_header div div { height: auto; overflow: visible; }
+
+.sf_extra3 {	
+}
+
+.sf_sub_header { 
+	display:none;
+	padding-left: 310px;
+	padding-top: 4px;
+	font-size: 12px;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+.sf_main_header p, .sf_sub_header p {
+	margin:0px;
+	padding:0px;
+}
+
+/*--------------------------
+		End Header
+--------------------------*/
+
+.sf_extra4 {
+	height: 23px;
+}
+
+/*--------------------------------
+		Navigation
+---------------------------------*/
+
+.sf_navigation {
+	float: left;
+	width: 230px;
+	display: inline;
+	text-align: center;
+}
+
+.sf_navigation:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.sf_navigation ul {
+	list-style-type:none;	
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+.sf_navigation ul:after {
+	content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 1px;
+    clear: both;
+}
+
+.sf_navigation ul li {	
+	padding: 18px 0 0;
+	margin: 0 auto 10px;
+	width: 206px;
+}
+
+.sf_navigation ul li.sf_last_nav_item {		
+	padding-bottom: 12px;
+}
+
+.sf_navigation ul li.sf_first_nav_item {
+	padding: 0;
+	background-image: none;
+	margin-top: 10px;	
+}
+
+.sf_navigation ul li a:link, .sf_navigation ul li a:visited {
+	font-family: "Times New Roman", serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	font-weight: 100;
+}
+
+.sf_navigation ul li a:hover{
+	text-decoration: underline;
+	font-weight: 100;
+}
+
+/*--------------------------------
+		Flyout menu
+---------------------------------*/
+
+#Nav1 { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#Nav1 ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+	width: 230px;	
+}
+
+#Nav1 li { /* all list items */   
+	float: left;	
+	width: 230px;		
+}
+
+#Nav1 li ul { /* second-level lists */
+	position : absolute;
+	left: -999em;
+	margin-left : 180px;
+	margin-top : -20px;
+	.margin-left: -30px;
+	.margin-top: 0px;
+	z-index: 1000;
+	border:5px solid #333333;
+}
+
+#Nav1 li ul li { /* second-level lists */	
+	background-image: none;
+	position : relative;	
+	margin: 0px 0px 5px;
+	padding: 0px;	
+}
+
+#Nav1 li ul li a { /* second-level lists */		
+	background-color: #ffffff;
+	width: auto;
+	padding: 7px 0;
+	margin: 0px;
+	display:block;
+}
+
+#Nav1 li ul li a:hover {	
+	padding: 7px 0;
+	margin: 0px;
+	display:block;
+}
+
+#Nav1 li:hover ul, 
+#Nav1 li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;	
+	background-color: #ffffff;
+}
+
+#Nav1 iframe {
+	position: absolute;
+	/* account for the border */
+	left: -0.25em;
+	top: -0.25em;
+	z-index: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+	margin-left: 3px;
+}
+
+
+/*--------------------------------
+		End Navigation
+---------------------------------*/
+
+.sf_extra5 {	
+	width: 679px;
+	height: 47px;
+	float: right;
+	display: inline;
+}
+
+/*--------------------------------
+		 	Page Title
+---------------------------------*/
+
+.sf_pagetitle {
+	font-family: Arial, san-serif;
+	font-size: 18px;
+	width: 579px;
+	float: right;
+	display: inline;
+	padding: 0 50px 3px 50px;
+}
+
+
+/*--------------------------------
+		 End Page Title
+---------------------------------*/
+
+.sf_extra6 {	
+	width: 679px;
+	height: 36px;
+	display: inline;
+	float: right;
+	margin-left: -50px;
+}
+
+/*--------------------------------
+		 Sub Navigation
+---------------------------------*/
+
+.sf_subnavigation {
+	display: none;
+}
+
+.sf_subnavigation ul {	
+}
+
+.sf_subnavigation ul:after {	
+}
+
+.sf_subnavigation ul li {	
+}
+
+.sf_subnavigation ul li.sf_last_nav_item {
+}
+
+.sf_subnavigation ul li.sf_first_nav_item {
+}
+
+.sf_subnavigation ul li a {	
+}
+
+.sf_subnavigation ul li a:visited {	
+}
+
+.sf_subnavigation ul li a:hover {	
+}
+
+/*--------------------------------
+		 End Sub Navigation
+---------------------------------*/
+
+.sf_extra11 {
+}
+	
+/*--------------------------
+		Content
+--------------------------*/
+
+.sf_content {
+	float: right;
+	display: inline;
+	font-family: Arial, san-serif;
+	font-size: 13px;
+	min-height: 300px;
+	height: auto;
+	_height: 300px;
+	margin-left: -50px;
+	width: 579px;
+	padding: 0 50px;
+}
+
+.sf_content:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.sf_content img {	
+}
+
+/*--------------------------
+		End Content
+--------------------------*/
+
+
+.sf_extra12 {
+	width: 679px;
+	height: 47px;
+	float: right;
+	display: inline;
+}
+
+
+/*--------------------------------
+		 Sub Navigation2
+---------------------------------*/
+
+.sf_subnavigation2 {
+	display: none;
+}
+
+.sf_subnavigation2 ul {	
+}
+
+.sf_subnavigation2 ul:after {	
+}
+
+.sf_subnavigation2 ul li {	
+}
+
+.sf_subnavigation2 ul li.sf_last_nav_item {
+}
+
+.sf_subnavigation2 ul li.sf_first_nav_item {
+}
+
+.sf_subnavigation2 ul li a {	
+}
+
+.sf_subnavigation2 ul li a:visited {	
+}
+
+.sf_subnavigation2 ul li a:hover{	
+}
+
+/*--------------------------------
+		 End Sub Navigation2
+---------------------------------*/
+
+.sf_extra7 {	
+	height: 5px;
+	clear: both;
+}
+
+.sf_extra7 span{	
+}
+
+/*--------------------------
+		 Footer
+--------------------------*/
+
+.sf_footer {
+	clear: both;
+	float: right;
+	display: inline;
+	text-align: right;
+	margin: 10px 0;
+	font-family: "Times New Roman", Times, serif;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	width: 679px;
+	color: #ffffff;
+}
+.sf_footer div{	
+}
+
+.sf_footer p{
+	margin:0px;
+	padding:0px;
+}
+
+/*--------------------------
+		End Footer
+--------------------------*/
+
+
+.sf_extra8 {	
+}
+
+.sf_extra9 {	
+	height: 242px;
+	width: 100%;
+	clear: both;
+	background-image: url(images/bottom.jpg);
+	background-position: center;
+	background-repeat: repeat-x;
+}
+
+
+/*--------------------------
+		Extra Stuff
+--------------------------*/
+
+
+a:link {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {	
+	text-decoration: underline;	
+}
+
+.sf_banner {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 26px;
+}
+.sf_banner {
+	margin-top: -100px;
+}
+.sf_banner img {
+}
+
+.sf_banner a {
+}
+
+.sf_banner a:visited {
+}
+
+.sf_banner a:hover {
+}
+/**
+ * Sticking flyout menu bug
+ *
+ * @bugfix
+ * @affected ie7
+ * @css-for ie7
+ * @valid yes
+ */
+#Nav1 li:hover, #Nav1 li.hover {  
+    position: static;  
+} 
