@@ -25,11 +25,27 @@
 		<div class="sf_extra4"><span></span></div>
 
 		<div class="sf_navigation">
-			<div style="display:block" ><ul id="Nav1" class="nav"><li class="sf_first_nav_item">
-				<a href="Home.html" target="_self" onClick="">Texas Criminal Defense</a></li><li>
-				<a href="About.html" target="_self" onClick="">About</a></li><li class="sf_last_nav_item">
-				<a href="Contact.html" target="_self" onClick="">Contact Us</a></li></ul></div>
+			<div style="display:block">
+				<ul id="Nav1" class="nav">
+					<li class="sf_first_nav_item">
+					<%= link_to "Texas Criminal Defense", :controller => "pages", :action => "home" %>
+					</li>
+
+					<li>
+					<%= link_to "About", :controller => "pages", :action => "about" %>
+					</li>
+
+					<li class="sf_last_nav_item">
+					<%= link_to "Contact", :controller => "pages", :action => "contact" %>
+					</li>
+
+					<li class="sf_last_nav_item">
+					<%= link_to "Login" %>
+					</li>
+				</ul>
 			</div>
+		</div>
+
 		<div class="sf_extra5"><span></span></div>
 
 		<div class="sf_pagetitle">
@@ -89,7 +105,7 @@
 
 </div></div></div>
 
-<div id="content2">
+<div id="content2" style="display:block">
 	<div style="display:block">
 		<div style="display:block">
 			<p style="text-align: center;">
@@ -105,7 +121,7 @@
 	</div>
 </div>
 
-<div id="content3">
+<div id="content3" style="display:block">
 	<div style="display:block">
 		<div style="display:block">
 			<p style="text-align: center;">
