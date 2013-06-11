@@ -65,7 +65,7 @@ p {
 ---------------------------------*/
 
 .sf_header_wrapper {
-	background-image: url(images/header_1.png);
+	background-image: url(header_1.png);
 	background-repeat: no-repeat;
 }
 
@@ -119,7 +119,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 }
 
 .sf_navigation ul li {
-	background-image: url(images/separator_1.gif);
+	background-image: url(separator_1.gif);
 	background-repeat: no-repeat;
 	background-position: top center;
 }
@@ -148,7 +148,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 ---------------------------------*/
 
 .sf_extra5 {	
-	background-image: url(images/topofframe_1.gif);
+	background-image: url(topofframe_1.gif);
 	background-repeat: no-repeat;
 }
 
@@ -157,7 +157,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 ---------------------------------*/
 
 .sf_pagetitle {
-	background-image: url(images/backofframe_1.gif);
+	background-image: url(backofframe_1.gif);
 	background-repeat: repeat-y;
 	background-color: #F4EDDD;
 }
@@ -167,7 +167,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 ---------------------------------*/
 
 .sf_extra6 {	
-	background-image: url(images/midofframe_1.gif);
+	background-image: url(midofframe_1.gif);
 	background-repeat: no-repeat;	
 }
 
@@ -215,7 +215,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 --------------------------*/
 
 .sf_content {	
-	background-image: url(images/backofframe_1.gif);
+	background-image: url(backofframe_1.gif);
 	background-repeat: repeat-y;
 	background-color: #F4EDDD;
 }	
@@ -230,7 +230,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 
 
 .sf_extra12 {
-	background-image: url(images/botofframe_1.gif);
+	background-image: url(botofframe_1.gif);
 	background-repeat: no-repeat;
 }
 

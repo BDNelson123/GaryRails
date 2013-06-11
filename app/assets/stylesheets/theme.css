@@ -36,7 +36,7 @@ p {
 	_height: 700px;
 	width: 958px;
 	margin: 0 auto;
-	background-image: url(images/lawyer.jpg);
+	background-image: url(lawyer.jpg);
 	background-repeat: no-repeat;
 	background-position: 33px 53px;
 }
@@ -483,7 +483,7 @@ p {
 	height: 242px;
 	width: 100%;
 	clear: both;
-	background-image: url(images/bottom.jpg);
+	background-image: url(bottom.jpg);
 	background-position: center;
 	background-repeat: repeat-x;
 }
