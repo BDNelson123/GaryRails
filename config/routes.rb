@@ -6,10 +6,11 @@ Gary::Application.routes.draw do
   match '/home' => 'pages#home'
   match '/about' => 'pages#about'
   match '/contact' => 'pages#contact'
+  match 'dashboard' => 'home#index'
 
   # This redirects user after login
   namespace :member do
-    root :to => "console#index"
+    root :to => "home#index"
   end
 
   # The priority is based upon order of creation:
