@@ -483,9 +483,11 @@ p {
 	height: 242px;
 	width: 100%;
 	clear: both;
+	/* 
 	background-image: url(bottom.jpg);
-	background-position: center;
+	background-position: center bottom;
 	background-repeat: repeat-x;
+	*/
 }
 
 

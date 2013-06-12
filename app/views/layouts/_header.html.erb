@@ -1,1 +1,21 @@
+<% if member_signed_in? %>
+  <table cellspacing =0 cellpadding=0 align="center" width="850px" class="White_Test" style="border-radius:5px; background-color:#BBB; text-align:center; border:solid 1px #AAA; margin-top:15px">
+    <tr>
+      <td>
+        <%= link_to "Clients", :controller => "client", :action => "index" %>
+      </td>
 
+      <td>
+        Employees
+      </td>
+
+      <td>
+        Events
+      </td>
+
+      <td>
+        <% link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+      </td>
+    <tr>
+  </table> 
+<% end %>
