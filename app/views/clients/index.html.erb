@@ -1,0 +1,17 @@
+<table class="White_Test" align="center" width="850px">
+  <tr>
+    <td colspan=2>
+    <h1 class="White_Test">Clients</h1>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Name</b></td>
+    <td><b>Date-of-Birth</b></td>
+  </tr>
+
+  <% for client in @clients %>
+    <tr>
+      <td><%= client.firstname %>&nbsp;<%= client.lastname %></td>
+    </tr>
+  <% end %>
+</table>

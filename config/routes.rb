@@ -3,14 +3,23 @@ Gary::Application.routes.draw do
   devise_for :members,:controller => { :registrations => 'registration' }
 
   root :to => 'pages#home'
-  match '/home' => 'pages#home'
+
+  match '/homes' => 'pages#home'
   match '/about' => 'pages#about'
   match '/contact' => 'pages#contact'
-  match 'dashboard' => 'home#index'
+  match 'dashboard' => 'homes#index'
+
+  namespace :client do
+    root :to => "clients#index"
+  end
+ 
+  match '/clients/index' => 'clients#index'
+  match '/clients/view' => 'clients#view'
+  resources :clients
 
   # This redirects user after login
   namespace :member do
-    root :to => "home#index"
+    root :to => "homes#index"
   end
 
   # The priority is based upon order of creation:
