@@ -11,7 +11,7 @@
 
   <% for client in @clients %>
     <tr>
-      <td><%= link_to client.firstname, :controller => "clients", :action => "view", :id => client.id %></td>
+      <td><%= link_to client.firstname+' '+client.lastname, :controller => "clients", :action => "view", :id => client.id %></td>
       <td><%= client.dob %></td>
     </tr>
   <% end %>
