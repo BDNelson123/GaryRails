@@ -1,42 +1,19 @@
 <% if member_signed_in? %>
-	<ul id="menu">
-		<li><%= link_to "Home", :controller => "/homes" %></li>
-	    	<li><a href="/clients/">Clients</a>
-			<ul>
-		    		<li><a href="aClients/new">Create Client</a></li>
-			</ul>
-	    	</li>
-	    	<li>Employees</li>
-	    	<li>Events</li>
-	    	<li><%= link_to "Sign Out", destroy_member_session_path, :method => :delete %></li>
-	</ul>
+	<table align="center" width="850px" cellspacing=0 cellpadding=0>
+		<tr>
+			<td style="padding-top:25px">
+				<ul id="menu">
+					<li><%= link_to "Home", :controller => "/homes" %></li>
+					<li><a href="/clients/">Clients</a>
+						<ul>
+							<li><a href="/clients/new">Create Client</a></li>
+						</ul>
+					</li>
+					<li><a href=#>Employees</a></li>
+					<li><a href=#>Events</a></li>
+					<li><%= link_to "Sign Out", destroy_member_session_path, :method => :delete %></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
 <% end %>
-
-
-<ul id="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About Us</a>
-        <ul>
-            <li><a href="#">The Team</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Vision</a></li>
-        </ul>
-    </li>
-    <li><a href="#">Products</a>
-        <ul>
-            <li><a href="#">Cozy Couch</a></li>
-            <li><a href="#">Great Table</a></li>
-            <li><a href="#">Small Chair</a></li>
-            <li><a href="#">Shiny Shelf</a></li>
-            <li><a href="#">Invisible Nothing</a></li>
-        </ul>
-    </li>
-    <li><a href="#">Contact</a>
-        <ul>
-            <li><a href="#">Online</a></li>
-            <li><a href="#">Right Here</a></li>
-            <li><a href="#">Somewhere Else</a></li>
-        </ul>
-    </li>
-</ul>
-- See more at: http://www.handy-html.com/create-a-simple-css-dropdown-menu/#sthash.89bgOiLL.dpuf

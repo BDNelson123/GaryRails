@@ -9,6 +9,7 @@ ul li {
     display: block;
     position: relative;
     float: left;
+    width:20%;
 }
 li ul {
     display: none;
@@ -16,25 +17,26 @@ li ul {
 ul li a {
     display: block;
     text-decoration: none;
-    color: #ffffff;
+    color: #000;
     border-top: 1px solid #ffffff;
     padding: 5px 15px 5px 15px;
-    background: #1e7c9a;
+    background: #FFF;
     margin-left: 1px;
     white-space: nowrap;
 }
 ul li a:hover {
-background: #3b3b3b;
+    background: #DDD;
 }
 li:hover ul {
     display: block;
     position: absolute;
+width:850px;
 }
 li:hover li {
     float: none;
     font-size: 11px;
 }
-li:hover a { background: #3b3b3b; }
+li:hover a { background: #DDD; }
 li:hover li a:hover {
-    background: #1e7c9a;
+    background: #CCC;
 }
