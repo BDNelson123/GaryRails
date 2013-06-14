@@ -7,12 +7,17 @@
   <tr>
     <td><b>Name</b></td>
     <td><b>Date-of-Birth</b></td>
+    <td><b>Action</b></td>
   </tr>
 
   <% for client in @clients %>
     <tr>
-      <td><%= link_to client.firstname+' '+client.lastname, :controller => "clients", :action => "view", :id => client.id %></td>
+      <td><%= link_to client.firstname+' '+client.lastname, :controller => "clients", :action => "show", :id => client.id %></td>
       <td><%= client.dob %></td>
+      <td>
+        <%= link_to "edit", :controller => "clients", :action => "edit", :id => client.id %>
+	|
+	<%= link_to "delete", :confirm => 'Really?', :controller => "clients", :action => "destroy", :id => client.id  %>
     </tr>
   <% end %>
 </table>
