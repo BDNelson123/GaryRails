@@ -139,7 +139,7 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 }
 
 .sf_navigation ul li a:hover{
-	color: #336699;
+	color: #FFF;
 }
 
 
@@ -302,11 +302,11 @@ this.runtimeStyle.backgroundImage = "none")),this.pngSet=true));
 
 
 a:link {
-	color: #336699;	
+	color: #FFF;	
 }
 
 a:visited {
-	color: #336699;
+	color: #FFF;
 }
 
 a:hover {
