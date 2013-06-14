@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+  <table class="White_Test" align="center" width="850px" style="text-align:center; font-size:16pt; padding-top:15px">
+    <tr><td><%= flash[:notice] %></td></tr>
+  </table>
+<% end %>
+
 <table class="White_Test" align="center" width="850px">
   <tr>
     <td colspan=2>
@@ -17,7 +23,7 @@
       <td>
         <%= link_to "edit", :controller => "clients", :action => "edit", :id => client.id %>
 	|
-	<%= link_to "delete", :confirm => 'Really?', :controller => "clients", :action => "destroy", :id => client.id  %>
+	<%= link_to "delete", client, :confirm => "Are you sure you wanted to delete this client?", :controller => "clients", :action => "destroy", :id => client.id, :method => :delete  %>
     </tr>
   <% end %>
 </table>

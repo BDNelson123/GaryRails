@@ -5,49 +5,34 @@
 <%= form_for(@client) do |f| %>
   <% if @client.errors.any? %>
     <div id="errorExplanation" class="White_Test">
-      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being saved:</h2>
+      <h2><%= pluralize(@client.errors.count, "error") %> prohibited this client from being updated:</h2>
 
-      <ul>
+      <table align="center">
         <% @client.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
+          <tr><td><%= msg %></td></tr>
         <% end %>
-      </ul>
+        <tr><td>&nbsp;</td></tr>
+      </table>
     </div>
   <% end %>
 
   <table class="White_Test" align="center" style="text-align:left">
-    <tr>
-      <td>
-        <%= f.label :firstname %><br>
-        <%= f.text_field :firstname %>
-      </td>
-    </tr>
+    <tr><td><%= f.label :firstname %></td></tr>
+    <tr><td><%= f.text_field :firstname %></td></tr>
 
     <tr><td>&nbsp;</td></tr>
 
-    <tr>
-      <td>
-        <%= f.label :lastname %><br>
-        <%= f.text_field :lastname %>
-      </td>
-    </tr>
+    <tr><td><%= f.label :lastname %></td></tr>
+    <tr><td><%= f.text_field :lastname %></td></tr>
 
     <tr><td>&nbsp;</td></tr>
 
-    <tr>
-      <td>
-        <%= f.label :dob, 'Date-of-Birth' %><br>
-        <%= f.text_field :dob %>
-      </td>
-    </tr>
+    <tr><td><%= f.label :dob, 'Date-of-Birth' %></td></tr>
+    <tr><td><%= f.text_field :dob %></td></tr>
 
     <tr><td>&nbsp;</td></tr>
 
-    <tr>
-      <td style="text-align:center">
-        <%= f.submit %>
-      </td>
-    </tr>
+    <tr><td style="text-align:center"><%= f.submit %></td></tr>
   </table>
 <% end %>
 		

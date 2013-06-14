@@ -40,11 +40,18 @@ class ClientsController < ApplicationController
           format.html { redirect_to(:controller => 'clients', :action => 'show', :id => @client.id) }
         end
     else
-        format.html { render :action => "edit" }
+        respond_to do |format|
+          format.html { render :action => "edit" }
+        end
     end
   end
 
   def destroy
+    respond_to do |format|
+      Client.find(params[:id]).destroy
+      flash[:notice] = "Client successfully deleted"
+      format.html { redirect_to(:controller => 'clients', :action => 'index') }
+    end
   end
 
 end
