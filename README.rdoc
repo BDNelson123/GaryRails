@@ -1,1 +1,1 @@
-Website for Gary Pruse
+Website for Gary Pruse - Rails App
