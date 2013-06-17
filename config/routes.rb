@@ -16,6 +16,7 @@ Gary::Application.routes.draw do
   match 'dashboard' => 'homes#index'
  
   resources :clients
+  resources :folders
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -15,6 +15,8 @@ class FoldersController < ApplicationController
         format.html { redirect_to(:controller => 'folders', :action => 'show', :id => @folder.id, :member_id => @folder.member_id) }
       else 
         format.html { render :action => "new" }
+      end
+    end
   end
 
   def index
@@ -42,14 +44,17 @@ class FoldersController < ApplicationController
         format.html { render :action => "edit" }
       end
     end
+  end
 
   def destroy
-    @client = Client.find(params[:client_id])
+    @folder = Folder.find(params[:id])
+    @client = @folder.client_id
 
     respond_to do |format|
-      Folder.find(params[:id]).destroy
+      @folder.destroy
       flash[:notice] = "Folder successfully deleted"
-      format.html { redirect_to(:controller => 'folders', :action => 'index', :member_id => @client.id) }
+      format.html { redirect_to(:controller => 'folders', :action => 'index', :client_id => @client) }
     end
   end
+
 end

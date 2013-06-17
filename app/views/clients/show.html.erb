@@ -5,6 +5,18 @@
 <% end %>
 
 <table class="White_Test" align="center" width="850px" style="text-align:left">
+  <tr><td>&nbsp;</td></tr>
+</table>
+
+<table class="White_Test" align="center" width="850px" style="text-align:left">
+  <tr>
+    <td>
+    <%= link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:id] %>
+    </td>
+  </tr>
+</table>
+
+<table class="White_Test" align="center" width="850px" style="text-align:left">
   <tr><td><h1><%= @client.firstname %> <%= @client.lastname %></h1></td></tr>
   <tr>
     <td>

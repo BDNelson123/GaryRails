@@ -1,0 +1,24 @@
+<% if flash[:notice] %>
+  <table class="White_Test" align="center" width="850px" style="text-align:center; font-size:16pt; padding-top:15px">
+    <tr><td><%= flash[:notice] %></td></tr>
+  </table>
+<% end %>
+
+<table class="White_Test" align="center" width="850px">
+  <tr>
+    <td colspan=2>
+    <h1 class="White_Test">Folders</h1>
+    </td>
+  </tr>
+
+  <% for folder in @folder %>
+    <tr>
+      <td><%= link_to folder.name, :controller => "folders", :action => "show", :id => folder.id %></td>
+      <td>
+        <%= link_to "edit", :controller => "folders", :action => "edit", :id => folder.id %>
+	|
+	<%= link_to "delete", folder, :confirm => "Are you sure you wanted to delete this folder?", :method => :delete  %>
+      </td>
+    </tr>
+  <% end %>
+</table>
