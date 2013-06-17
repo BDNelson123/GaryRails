@@ -11,14 +11,25 @@
     </td>
   </tr>
 
-  <% for folder in @folder %>
-    <tr>
-      <td><%= link_to folder.name, :controller => "folders", :action => "show", :id => folder.id %></td>
-      <td>
+  <tr>
+    <% 
+    @loopCount = 0
+    for folder in @folder
+    @loopCount = @loopCount + 1 
+    %>
+      <td class="White_Test" style="text-align:center">
+        <%= link_to image_tag("black_folder_48.png"), :controller => "documents", :action => "index", :folder_id => folder.id %>
+	<br>
+        <%= folder.name %>
+        <br>
         <%= link_to "edit", :controller => "folders", :action => "edit", :id => folder.id %>
 	|
 	<%= link_to "delete", folder, :confirm => "Are you sure you wanted to delete this folder?", :method => :delete  %>
       </td>
-    </tr>
-  <% end %>
+  
+      <% if @loopCount % 5 == 0 %>
+        </tr><tr>
+      <% end %>
+    <% end %>
+  </tr>
 </table>

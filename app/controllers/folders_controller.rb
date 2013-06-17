@@ -21,6 +21,7 @@ class FoldersController < ApplicationController
 
   def index
     @folder = Folder.where(:client_id => params[:client_id])
+    @count = Folder.where(:client_id => params[:client_id]).count
   end
 
   def show
