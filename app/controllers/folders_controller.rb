@@ -3,6 +3,7 @@ class FoldersController < ApplicationController
   before_filter :authenticate_member!
 
   def new
+    @client = Client.find(params[:client_id])
     @folder = Folder.new
   end
 
@@ -20,6 +21,7 @@ class FoldersController < ApplicationController
   end
 
   def index
+    @client = Client.find(params[:client_id])
     @folder = Folder.where(:client_id => params[:client_id]).order("name asc")
     @count = Folder.where(:client_id => params[:client_id]).count
   end
