@@ -1,0 +1,28 @@
+<div style="text-align:center; width:100%">
+
+<h1 class="White_Test">Update Folder</h1>
+
+<%= form_for(@folder) do |f| %>
+  <% if @folder.errors.any? %>
+    <div id="errorExplanation" class="White_Test">
+      <h2><%= pluralize(@folder.errors.count, "error") %> prohibited this folder from being saved:</h2>
+
+      <table align="center">
+        <% @folder.errors.full_messages.each do |msg| %>
+          <tr><td><%= msg %></td></tr>
+        <% end %>
+        <tr><td>&nbsp;</td></tr>
+      </table>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :client_id, :value => params[:client_id] %>
+
+  <table class="White_Test" align="center" style="text-align:left">
+    <tr><td><%= f.label :name %></td></tr>
+    <tr><td><%= f.text_field :name %></td></tr>
+    <tr><td style="text-align:center"><%= f.submit %></td></tr>
+  </table>
+<% end %>
+
+</div>

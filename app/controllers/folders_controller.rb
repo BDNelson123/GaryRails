@@ -26,11 +26,8 @@ class FoldersController < ApplicationController
     @count = Folder.where(:client_id => params[:client_id]).count
   end
 
-  def show
-    @folder = Folder.find(params[:id])
-  end
-
   def edit
+    @client = Client.find(params[:client_id])
     @folder = Folder.find(params[:id])
   end
 
