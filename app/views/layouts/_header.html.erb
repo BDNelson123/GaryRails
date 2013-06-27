@@ -1,5 +1,6 @@
 <!-- This is main navigation for logged in user -->
 <% if member_signed_in? and params[:controller] != 'pages'  %>
+
   <table id="HeaderID" align="center" width="850px" cellspacing=0 cellpadding=0>
     <tr>
       <td style="padding-top:25px">
@@ -17,43 +18,46 @@
       </td>
     </tr>
   </table>
-<% end %>
 
-<!-- This is the header for the clients -->
-<% if 
-  member_signed_in? and (
-  (params[:controller] == 'clients' and params[:action] != 'index' and params[:action] != 'new') or 
-  params[:controller] == 'folders'
-) 
-%>
+  <!-- This shows all message flashes -->
   <% if flash[:notice] %>
     <table class="White_Test" align="center" width="850px" style="text-align:center; font-size:16pt; padding-top:15px">
       <tr><td><%= flash[:notice] %></td></tr>
     </table>
   <% end %>
 
-  <table class="White_Test" align="center" width="850px" style="text-align:left"><tr><td>&nbsp;</td></tr></table>
+  <!-- This is the header for the clients -->
+  <% if 
+    (params[:controller] == 'clients' and params[:action] != 'index' and params[:action] != 'new') or 
+    params[:controller] == 'folders'
+  %>
+    <table class="White_Test" align="center" width="850px" style="text-align:left"><tr><td>&nbsp;</td></tr></table>
 
-  <table class="White_Test" align="center" width="850px" style="text-align:left">
-    <tr>
-      <td>
-        <%=
-        if params[:controller] == 'folders'
-          link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:client_id]
-        else 
-          link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:id] 
-        end
-        %>
-      </td>
-    </tr>
-  </table>
+    <table class="White_Test" align="center" width="850px" style="text-align:left">
+      <tr>
+        <td style="font-size:20pt; color:#FFF; font-weight:bold; padding-top:15px">
+          <%=
+          if params[:client_id]
+            link_to @client.firstname+' '+@client.lastname, :controller => "clients", :action => "show", :id => params[:client_id]
+          else 
+            link_to @client.firstname+' '+@client.lastname, :controller => "clients", :action => "show", :id => params[:id] 
+          end
+          %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%=
+          if params[:controller] == 'folders'
+            link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:client_id]
+          else 
+            link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:id] 
+          end
+          %>
+        </td>
+      </tr>
+      <tr><td>&nbsp;</td></tr>
+    </table>
+  <% end %>
 
-  <table class="White_Test" align="center" width="850px" style="text-align:left">
-    <tr><td style="font-size:20pt; color:#FFF; font-weight:bold; padding-top:15px"><%= @client.firstname %> <%= @client.lastname %></td></tr>
-    <tr>
-      <td>
-      Date-of-Birth: <%= @client.dob %>
-      </td>   
-    </tr>
-  </table>
 <% end %>
