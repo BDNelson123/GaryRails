@@ -37,8 +37,8 @@
   <table class="White_Test" align="center" width="850px" style="text-align:left">
     <tr>
       <td>
-        <% 
-        if params[:controller] = 'folders'
+        <%=
+        if params[:controller] == 'folders'
           link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:client_id]
         else 
           link_to "Folders", :controller => "folders", :action => "index", :client_id => params[:id] 
