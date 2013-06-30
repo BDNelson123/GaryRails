@@ -2,12 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   private
-  def paginationTotal(model, total)
-    if total == nil
-      @total = model.count(:all)
-    else
-      @total = total
-    end
+  def paginationTotal(model)
+    @total = model.count(:all)
   end
 
   private
@@ -27,41 +23,39 @@ class ApplicationController < ActionController::Base
       else
         @order = "id DESC"
       end
+    else
+      @order = order
     end
   end
 
-  private 
+  private
   def paginationPerPage(perPage)
     if (perPage != '15' and perPage != '25' and perPage != '50' and perPage != '100') or perPage == nil
       @perPage = '15'
     else
-      @perpage = perPage
+      @perPage = perPage
     end
   end
 
   protected
-  def pagination(model, page, perPage, order, total, totalPages)
-    paginationTotal(model, total)
+  def pagination(model, page, perPage, order)
+    paginationTotal(model)
     paginationPage(page)
     paginationOrder(model, order)
     paginationPerPage(perPage)
+
+    # find total pages
+    @totalPages = (@total.to_f / @perPage.to_f).ceil
+
+    if Integer(@page) > Integer(@totalPages)
+      @page = @totalPages
+    end
 
     # find beginning of each page
     if Integer(@perPage) > Integer(@total) or Integer(@page) == 1
       @beginning = 0
     else
       @beginning = (Integer(@page) * Integer(@perPage)) - Integer(@perPage)
-    end
-
-    # find total pages
-    if totalPages == nil
-      @totalPages = (@total.to_f / @perPage.to_f).ceil
-    else
-      @totalPages = totalPages
-    end
-
-    if Integer(@page) > Integer(@totalPages)
-      page = @totalPages
     end
 
     # sql query
