@@ -1,19 +1,29 @@
-<% if flash[:notice] %>
-  <table class="White_Test" align="center" width="850px" style="text-align:center; font-size:16pt; padding-top:15px">
-    <tr><td><%= flash[:notice] %></td></tr>
-  </table>
-<% end %>
-
 <table class="White_Test" align="center" width="850px">
+  <tr><td colspan=2 class="White_Test" style="font-size:20pt; padding:20px 0px 0px 0px; font-weight:bold">Clients</td></tr>
+  <tr><td style="font-size:10pt">Total: <%= @total %></td></tr>
+  <tr><td>&nbsp;</td></tr>
+
   <tr>
-    <td colspan=2>
-    <h1 class="White_Test">Clients</h1>
+    <td colspan=3 style="text-align:right; font-size:9pt">
+      <% if @page > '1' %>
+        << &nbsp;
+      <% end %>
+
+      Page <%= @perPage %> of <%= @totalPages %>
+
+      <% if Integer(@page) < @totalPages %>
+        &nbsp; 
+        <%= link_to ">>", url_for( :page => Integer(@page) + 1 ) %>
+      <% end %>
     </td>
   </tr>
+
+  <tr><td style="font-size:1pt">&nbsp;</td></tr>
+
   <tr>
     <td><b>Name</b></td>
     <td><b>Date-of-Birth</b></td>
-    <td><b>Action</b></td>
+    <td width="105px"><b>Action</b></td>
   </tr>
 
   <% for client in @clients %>

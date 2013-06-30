@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
   end
 
   def index
-    @clients = Client.find(:all)
+    @clients = self.pagination(Client, params[:page], params[:perPage], params[:order])
   end
 
   def show
