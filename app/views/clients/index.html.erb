@@ -5,15 +5,16 @@
 
   <tr>
     <td colspan=3 style="text-align:right; font-size:9pt">
-      <% if Integer(@page) > 1 %>
-        << &nbsp;
+      <% if @page > '1' %>
+        <%= link_to "<<", :controller => "clients", :action => "index", :page => Integer(@page) - 1, :perPage => params[:perPage], :order => params[:order], :total => @total, :totalPages => @totalPages %> 
+        &nbsp;
       <% end %>
 
       Page <%= @page %> of <%= @totalPages %>
 
-      <% if Integer(@page) < @totalPages %>
+      <% if Integer(@page) < Integer(@totalPages) %>
         &nbsp; 
-        <%= link_to ">>", url_for( :page => Integer(@page) + 1 ) %>
+        <%= link_to ">>", :controller => "clients", :action => "index", :page => Integer(@page) + 1, :perPage => params[:perPage], :order => params[:order], :total => @total, :totalPages => @totalPages %>
       <% end %>
     </td>
   </tr>

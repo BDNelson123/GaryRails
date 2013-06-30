@@ -20,7 +20,7 @@ class ClientsController < ApplicationController
   end
 
   def index
-    @clients = self.pagination(Client, params[:page], params[:perPage], params[:order])
+    @clients = self.pagination(Client, params[:page], params[:perPage], params[:order], params[:total], params[:totalPages])
   end
 
   def show
