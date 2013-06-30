@@ -5,11 +5,11 @@
 
   <tr>
     <td colspan=3 style="text-align:right; font-size:9pt">
-      <% if @page > '1' %>
+      <% if Integer(@page) > 1 %>
         << &nbsp;
       <% end %>
 
-      Page <%= @perPage %> of <%= @totalPages %>
+      Page <%= @page %> of <%= @totalPages %>
 
       <% if Integer(@page) < @totalPages %>
         &nbsp; 

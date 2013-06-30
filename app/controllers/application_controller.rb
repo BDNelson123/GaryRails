@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # -- Pagination -- #
   private
   def paginationDefaults(model, page, perPage, order)
-    if page == nil or page < '1'
+    if page == nil or page < '1' or page == ''
       @page = '1'
     else 
       @page = page
@@ -31,7 +31,11 @@ class ApplicationController < ActionController::Base
     @totalPages = (Integer(@total.to_f) / Integer(@perPage)).ceil
 
     if Integer(@page) > Integer(@totalPages)
-      @page = Integer(@totalPages)
+      @page = @totalPages
+    end
+
+    if Integer(@perPage) > Integer(@total)
+      @perPage = @total
     end
 
     @beginning = (Integer(@page) * Integer(@perPage)) - (Integer(@perPage) - 1)
