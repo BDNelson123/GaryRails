@@ -21,7 +21,7 @@
 
   <!-- This shows all message flashes -->
   <% if flash[:notice] %>
-    <table class="White_Test" align="center" width="850px" style="text-align:center; font-size:16pt; padding-top:15px">
+    <table align="center" width="850px" style="text-align:center; font-size:16pt; padding-top:15px">
       <tr><td><%= flash[:notice] %></td></tr>
     </table>
   <% end %>
@@ -31,9 +31,9 @@
     (params[:controller] == 'clients' and params[:action] != 'index' and params[:action] != 'new') or 
     params[:controller] == 'folders'
   %>
-    <table class="White_Test" align="center" width="850px" style="text-align:left"><tr><td>&nbsp;</td></tr></table>
+    <table align="center" width="850px" style="text-align:left"><tr><td>&nbsp;</td></tr></table>
 
-    <table class="White_Test" align="center" width="850px" style="text-align:left">
+    <table align="center" width="850px" style="text-align:left">
       <tr>
         <td style="font-size:20pt; color:#FFF; font-weight:bold; padding-top:15px">
           <%=

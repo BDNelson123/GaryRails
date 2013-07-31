@@ -5,15 +5,33 @@
 
   <tr>
     <td colspan=3 style="text-align:right; font-size:9pt">
-     Page <%= @page %> of <%= @totalPages %>
+      <% if params[:page].to_i > 1 %>
+        <%= link_to '<< ', :controller => "clients", :action => "index", :page => @page.to_i - 1, :order => params[:order], :perPage => params[:perPage] %> &nbsp;
+      <% end %>
+      Page <%= @page %> of <%= @totalPages %>
+      <% if @totalPages > 1 and params[:page].to_i != @totalPages and params[:page].to_i <= @totalPages %>
+        &nbsp; <%= link_to ' >>', :controller => "clients", :action => "index", :page => @page.to_i + 1 %>
+      <% end %>
     </td>
   </tr>
 
   <tr><td style="font-size:1pt">&nbsp;</td></tr>
 
   <tr>
-    <td><b>Name</b></td>
-    <td><b>Date-of-Birth</b></td>
+    <td>
+      <% if params[:order] == 'lastname ASC' %>
+       <b><%= link_to 'Name', :controller => "clients", :action => "index", :page => params[:page], :order => 'lastname DESC', :perPage => params[:perPage] %></b>
+      <% else %>
+       <b><%= link_to 'Name', :controller => "clients", :action => "index", :page => params[:page], :order => 'lastname ASC', :perPage => params[:perPage] %></b>
+      <% end %>
+    </td>
+    <td>
+      <% if params[:order] == 'dob ASC' %>
+       <b><%= link_to 'Date-of-Birth', :controller => "clients", :action => "index", :page => params[:page], :order => 'dob DESC', :perPage => params[:perPage] %></b>
+      <% else %>
+       <b><%= link_to 'Date-of-Birth', :controller => "clients", :action => "index", :page => params[:page], :order => 'dob ASC', :perPage => params[:perPage] %></b>
+      <% end %>
+    </td>
     <td width="105px"><b>Action</b></td>
   </tr>
 
